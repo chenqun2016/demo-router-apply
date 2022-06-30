@@ -1,0 +1,23 @@
+//使用发布好的插件
+1：配置Maven仓库地址，两个地方
+在 build.gradle(demo-router-use) 中的 buildscript / repositories 里和
+settings.gradle(demo-router-use) 中的 dependencyResolutionManagement / repositories 里设置
+（旧版是 allprojects / repositories）
+maven {
+      url uri("/Users/jessie/workspace/demo1/demorouter/demo-router/repo")
+      allowInsecureProtocol = true
+}
+
+2：声明依赖的插件，形式是： groupId：artifactId：version
+在 build.gradle(demo-router-use) 中设置
+classpath "com.chenchen.router:router-gradle-plugin:1.0"
+
+3：应用路由插件 在 build.gradle(:app)中
+plugins {
+    id 'com.chenchen.router'
+}
+
+4，向路由插件传递参数  在 build.gradle(:app)中
+router {
+    wikiDir getRootDir().absolutePath
+}

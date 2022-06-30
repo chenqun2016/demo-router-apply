@@ -1,6 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    /**
+     * 3,应用路由插件
+     */
+    id 'com.chenchen.router'
+}
+
+/**
+ * 4，向路由插件传递参数
+ */
+router {
+    wikiDir getRootDir().absolutePath
 }
 
 android {
