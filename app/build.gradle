@@ -26,6 +26,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            //给注解处理器中传入参数
+            kapt {
+                arguments {
+                    arg("key", "value")
+                }
+            }
+        }
     }
 
     buildTypes {
