@@ -23,7 +23,7 @@ buildscript {
          * 2,声明依赖的插件，
          * 形式是： groupId：artifactId：version
          */
-        classpath "com.chenchen.router:router-gradle-plugin:1.0"
+        classpath "com.chenchen.router:router-gradle-plugin:1.0.0"
 
     }
 }
