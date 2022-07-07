@@ -45,7 +45,7 @@ android {
     //给注解处理器中传入参数
     kapt {
         arguments {
-            arg("key", "value")
+            arg("root_project_dir", rootProject.projectDir.absolutePath)
         }
     }
 }
